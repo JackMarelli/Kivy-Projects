@@ -1,0 +1,21 @@
+#:kivy 2.1.0
+
+<Accord>
+    AccordionItem:
+        title: "Square"
+        TextInput:
+            hint_text: "Side"
+            id: txtSquareSide
+        Button:
+            id: btnSquare
+            text: "Get results in console"
+            on_release: root.getResults("square")
+    AccordionItem:
+        title: "Equilateral Triangle"
+        TextInput:
+            hint_text: "Side"
+            id: txtTriangleSide
+        Button:
+            id: btnTriangle
+            text: "Get results in console"
+            on_release: root.getResults("triangle_e")
