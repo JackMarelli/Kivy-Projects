@@ -50,6 +50,9 @@ class Accord(Accordion):
             p = Polygon(type = polygonType, side = int(self.ids["txtSquareSide"].text))
         elif polygonType == "triangle_e":
             p = Polygon(type = polygonType, side = int(self.ids["txtTriangleSide"].text))
+        elif polygonType == "rectangle":
+            p = Polygon(type = polygonType, base = int(self.ids["txtRectangleBase"].text), height = int(self.ids["txtRectangleHeight"].text))
+
         print(p.area)
         print(p.perimeter)
 
