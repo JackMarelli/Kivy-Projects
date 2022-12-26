@@ -1,0 +1,21 @@
+#:kivy 2.1.0
+
+<ToDoList>
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    GridLayout:
+        cols: 3
+        row_default_height: 60
+        row_force_default: True
+        Label:
+            color: [100, 50, 12, 1]
+            text: "Today"
+            size_hint: .8, None
+        Button:
+            color: [100, 50, 12, 1]
+            text: "Hello World 2"
+            size_hint: .2, None
