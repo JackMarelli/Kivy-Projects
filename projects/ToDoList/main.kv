@@ -8,14 +8,17 @@
             pos: self.pos
             size: self.size
     GridLayout:
-        cols: 3
-        row_default_height: 60
+        cols: 1
+        row_default_height: 50
         row_force_default: True
         Label:
-            color: [100, 50, 12, 1]
-            text: "Today"
-            size_hint: .8, None
-        Button:
-            color: [100, 50, 12, 1]
-            text: "Hello World 2"
-            size_hint: .2, None
+            bold: True
+            color: [0, 0, 0, 1]
+            halign: 'center'
+            font_size: 24
+            font_name: 'Montserrat'
+            font_weight: 600
+            padding: [10, 0]
+            text_size: self.size
+            text: "Tasks"
+            valign: 'center'
