@@ -3,22 +3,48 @@
 <ToDoList>
     canvas.before:
         Color:
-            rgba: 1, 1, 1, 1
+            rgba: .16, .16, .16, 1
         Rectangle:
             pos: self.pos
             size: self.size
-    GridLayout:
-        cols: 1
-        row_default_height: 50
-        row_force_default: True
+    BoxLayout:
+        orientation: "vertical"
         Label:
-            bold: True
-            color: [0, 0, 0, 1]
+            color: [1, 1, 1, 1]
             halign: 'center'
-            font_size: 24
-            font_name: 'Montserrat'
+            height: 50
+            font_size: 20
+            font_name: 'Montserrat_Bold'
             font_weight: 600
             padding: [10, 0]
-            text_size: self.size
+            size_hint: 1, 0.1
             text: "Tasks"
             valign: 'center'
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: 1, 0.07
+            Image:
+                size: 0.1, 0.5
+                size_hint: 0.5, 1
+                source: 'images/star.png'
+                size: self.texture_size
+            Label:
+                text: "Le mie attività"
+            Label:
+                text: "+ New list"
+        BoxLayout:
+            orientation: "vertical"
+            Label:
+            Label:
+            Label:
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: 1, 0.15
+
+
+
+
+
+
+
+

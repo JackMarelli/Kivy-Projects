@@ -8,13 +8,15 @@ Config.set('graphics', 'width', '375')
 Config.set('graphics', 'height', '812')
 
 Builder.load_file("main.kv")
-LabelBase.register(name='Montserrat', fn_regular='fonts/Montserrat-VariableFont_wght.ttf')
-LabelBase.register(name='Montserrat_Italic', fn_regular='fonts/Montserrat-Italic-VariableFont_wght.ttf')
+LabelBase.register(name='Montserrat', fn_regular='fonts/Montserrat.ttf')
+LabelBase.register(name='Montserrat_Italic', fn_regular='fonts/Montserrat-Italic.ttf')
+LabelBase.register(name='Montserrat_Bold', fn_regular='fonts/Montserrat-Bold.ttf')
 
 class Task():
     deadline = None
 
 class ToDoList(BoxLayout):
+
 
     def tmp(self):
         pass
