@@ -14,6 +14,8 @@ LabelBase.register(name='Montserrat_Bold', fn_regular='fonts/Montserrat-Bold.ttf
 
 class Task():
     deadline = None
+    title = ""
+    desc = ""
 
 class ToDoList(BoxLayout):
 
