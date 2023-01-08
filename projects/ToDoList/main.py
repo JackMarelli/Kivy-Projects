@@ -17,8 +17,8 @@ class Task():
     title = ""
     desc = ""
 
-class ToDoList(BoxLayout):
 
+class ToDoList(BoxLayout):
 
     def tmp(self):
         pass

@@ -36,19 +36,67 @@
             Label:
                 text: "+ New list"
         BoxLayout:
+            canvas.before:
+                Color:
+                    rgba: 0, 1, 1, 0.5
+                Line:    # --- adds a border --- #
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
             orientation: "vertical"
             Label:
+                canvas.before:
+                    Color:
+                        rgba: 0, 1, 0, 0.5
+                    Line:    # --- adds a border --- #
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
                 text: "task 1"
+                markup: True
+                halign: "left"
+                valign: "top"
+                size_hint: 1, None
+                size: self.texture_size
             Label:
+                canvas.before:
+                    Color:
+                        rgba: 0, 1, 0, 0.5
+                    Line:    # --- adds a border --- #
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
                 text: "task 2"
+                markup: True
+                halign: "left"
+                valign: "top"
+                size_hint: 1, None
+                size: self.texture_size
             Label:
+                canvas.before:
+                    Color:
+                        rgba: 0, 1, 0, 0.5
+                    Line:    # --- adds a border --- #
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
                 text: "task 3"
+                markup: True
+                halign: "left"
+                valign: "top"
+                size_hint: 1, None
+                size: self.texture_size
         BoxLayout:
             orientation: "horizontal"
             size_hint: 1, 0.15
             Image:
+                size: 0.1, 0.5
+                source: 'images/hamb-menu.png'
+                size: self.texture_size
             Image:
+                size: 0.1, 0.5
+                source: 'images/plus.png'
+                size: self.texture_size
             Image:
+                size: 0.1, 0.5
+                source: 'images/meatb-menu.png'
+                size: self.texture_size
 
 
 
