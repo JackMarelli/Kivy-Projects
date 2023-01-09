@@ -16,7 +16,9 @@ class Task():
     deadline = None
     title = ""
     desc = ""
-
+    starred = False
+    subtasks = []
+    completed = False
 
 class ToDoList(BoxLayout):
 

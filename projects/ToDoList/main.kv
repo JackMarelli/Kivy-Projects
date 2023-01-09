@@ -1,6 +1,22 @@
 #:kivy 2.1.0
 
-<Task>
+<MyTask@BoxLayout>
+    CheckBox:
+    BoxLayout:
+        Label:
+        Label:
+    CheckBox:
+        canvas.before:
+        Color:
+            rgb: 1,0,0
+        Rectangle:
+            pos:self.center_x-8, self.center_y-8
+            size:[16,16]
+        Color:
+            rgb: 0,0,0
+        Rectangle:
+            pos:self.center_x-7, self.center_y-7
+            size:[14,14]
 
 
 <ToDoList>
@@ -43,6 +59,7 @@
                     width: 2
                     rectangle: self.x, self.y, self.width, self.height
             orientation: "vertical"
+            MyTask:
             Label:
                 canvas.before:
                     Color:
@@ -82,6 +99,7 @@
                 valign: "top"
                 size_hint: 1, None
                 size: self.texture_size
+            Widget:
         BoxLayout:
             orientation: "horizontal"
             size_hint: 1, 0.15
