@@ -3,6 +3,7 @@ from kivy.core.text import LabelBase
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
 from kivy.config import Config
+from kivy.uix.popup import Popup
 
 Config.set('graphics', 'width', '375')
 Config.set('graphics', 'height', '812')
@@ -20,10 +21,14 @@ class Task():
     subtasks = []
     completed = False
 
+class NewTaskPopUp(Popup):
+    pass
+
 class ToDoList(BoxLayout):
 
-    def tmp(self):
-        pass
+    def newTask(self):
+        newTaskPopUp = NewTaskPopUp()
+        newTaskPopUp.open()
 
 class ToDoListApp(App):
 

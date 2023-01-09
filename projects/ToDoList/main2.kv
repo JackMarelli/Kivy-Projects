@@ -1,0 +1,15 @@
+#:kivy 2.1.0
+
+Screen:
+    NavigationLayout:
+        ScreenManager:
+            Screen:
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: "Navigation Drawer"
+                        elevation: 10
+                        left_action_items: [['menu', lambda x: nav_drawer.toggle_nav_drawer()]]
+                    Widget:
+        MDNavigationDrawer:
+            id: nav_drawer

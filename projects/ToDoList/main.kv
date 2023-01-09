@@ -1,23 +1,11 @@
 #:kivy 2.1.0
 
-<MyTask@BoxLayout>
-    CheckBox:
-    BoxLayout:
-        Label:
-        Label:
-    CheckBox:
-        canvas.before:
-        Color:
-            rgb: 1,0,0
-        Rectangle:
-            pos:self.center_x-8, self.center_y-8
-            size:[16,16]
-        Color:
-            rgb: 0,0,0
-        Rectangle:
-            pos:self.center_x-7, self.center_y-7
-            size:[14,14]
-
+<NewTaskPopUp>:
+    title: 'New Task'
+    size_hint: (None, None)
+    size: (344, 524)
+    Label:
+        text: 'Hello world'
 
 <ToDoList>
     canvas.before:
@@ -59,7 +47,6 @@
                     width: 2
                     rectangle: self.x, self.y, self.width, self.height
             orientation: "vertical"
-            MyTask:
             Label:
                 canvas.before:
                     Color:
@@ -107,10 +94,11 @@
                 size: 0.1, 0.5
                 source: 'images/hamb-menu.png'
                 size: self.texture_size
-            Image:
-                size: 0.1, 0.5
-                source: 'images/plus.png'
-                size: self.texture_size
+            Button:
+                on_press: root.newTask()
+                background_normal: "images/plus.png"
+                size_hint: .3, .5
+                pos_hint: {"x":0.35, "y":0.3}
             Image:
                 size: 0.1, 0.5
                 source: 'images/meatb-menu.png'
