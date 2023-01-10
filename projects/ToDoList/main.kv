@@ -4,8 +4,33 @@
     title: 'New Task'
     size_hint: (None, None)
     size: (344, 524)
-    Label:
-        text: 'Hello world'
+    BoxLayout:
+        orientation: "vertical"
+        TextInput:
+            hint_text: "Title"
+            size_hint: 1, None
+            size: 0, 30
+        TextInput:
+            hint_text: "Details"
+            size_hint: 1, None
+            size: 0, 30
+        BoxLayout:
+            size_hint: 1, 0.2
+            ImageButton:
+                source: "images/svg/hamb-menu.svg"
+                size_hint: 0.15, 0.5
+                pos_hint: {"x":0.0, "y":0.25}
+            ImageButton:
+                source: "images/svg/clock.svg"
+                size_hint: 0.15, 0.5
+                pos_hint: {"x":0.0, "y":0.25}
+            ImageButton:
+                source: "images/svg/star-outline.svg"
+                size_hint: 0.15, 0.5
+                pos_hint: {"x":0.0, "y":0.25}
+            Button:
+                text: "Save"
+        Widget:
 
 <ToDoList>
     canvas.before:

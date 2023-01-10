@@ -1,9 +1,12 @@
 from kivy.app import App
 from kivy.core.text import LabelBase
 from kivy.lang import Builder
+from kivy.uix.behaviors import ButtonBehavior
 from kivy.uix.boxlayout import BoxLayout
 from kivy.config import Config
 from kivy.uix.popup import Popup
+from kivy.uix.image import Image
+
 
 Config.set('graphics', 'width', '375')
 Config.set('graphics', 'height', '812')
@@ -20,6 +23,9 @@ class Task():
     starred = False
     subtasks = []
     completed = False
+
+class ImageButton(ButtonBehavior, Image):
+    pass
 
 class NewTaskPopUp(Popup):
     pass
