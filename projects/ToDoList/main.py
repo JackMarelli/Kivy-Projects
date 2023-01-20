@@ -1,5 +1,5 @@
 from kivy.app import App
-from kivy.core.text import LabelBase
+from kivy.core.text import LabelBase, Label
 from kivy.lang import Builder
 from kivy.uix.behaviors import ButtonBehavior
 from kivy.uix.boxlayout import BoxLayout
@@ -19,7 +19,7 @@ LabelBase.register(name='Montserrat_Bold', fn_regular='fonts/Montserrat-Bold.ttf
 class Task():
     deadline = None
     title = ""
-    desc = ""
+    _desc = ""
     starred = False
     subtasks = []
     completed = False
@@ -28,18 +28,33 @@ class ImageButton(ButtonBehavior, Image):
     pass
 
 class NewTaskPopUp(Popup):
-    pass
+    def addTask(self):
+        print("test")
 
-class ToDoList(BoxLayout):
+class ToDoList(BoxLayout): #ALL METHODS HERE
 
-    def newTask(self):
+    tasks = ()
+
+    def newTaskPopUp(self):
         newTaskPopUp = NewTaskPopUp()
         newTaskPopUp.open()
 
-class ToDoListApp(App):
+    def fillTaskList(self, category = None):
+        for t in self.tasks:
+            l = Label(text = t.title)
+            self.ids["homeTaskList"].add(l)
+
+    def addTask(self):
+        t = Task()
+        t.title = self.ids["titleInput"]
+        t.desc = self.ids["descInput"]
+        self.tasks.append(t)
+
+class ToDoListApp(App): #DO NOT ALTERATE
 
     def build(self):
         return ToDoList()
 
 if __name__ == '__main__':
     ToDoListApp().run()
+

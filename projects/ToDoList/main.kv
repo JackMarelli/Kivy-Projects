@@ -7,10 +7,12 @@
     BoxLayout:
         orientation: "vertical"
         TextInput:
+            id: "titleInput"
             hint_text: "Title"
             size_hint: 1, None
             size: 0, 30
         TextInput:
+            id: "descInput"
             hint_text: "Details"
             size_hint: 1, None
             size: 0, 30
@@ -30,6 +32,7 @@
                 pos_hint: {"x":0.0, "y":0.25}
             Button:
                 text: "Save"
+                on_press: addTask()
         Widget:
 
 <ToDoList>
@@ -65,6 +68,7 @@
             Label:
                 text: "+ New list"
         BoxLayout:
+            id: "homeTaskList"
             canvas.before:
                 Color:
                     rgba: 0, 1, 1, 0.5
@@ -120,7 +124,7 @@
                 source: 'images/hamb-menu.png'
                 size: self.texture_size
             Button:
-                on_press: root.newTask()
+                on_press: root.newTaskPopUp()
                 background_normal: "images/plus.png"
                 size_hint: .3, .5
                 pos_hint: {"x":0.35, "y":0.3}
